@@ -1,0 +1,5 @@
+xe_core.createService('dataTunnel',function(){if(!xe_dataTunnel.ready)
+return-1;var args=Array.prototype.slice.call(arguments);if(!xe_isset(args[0],'string')||!xe_isset(args[1],'string'))
+return false;var lastArgument=args[args.length-1];var cbid=String(+new Date);if(lastArgument.call)
+window['xe-cb_'+cbid]=lastArgument;var payload={action:args[0],data:args[1],id:cbid};xe_dataTunnel.layer.contentWindow.postMessage(window.btoa(JSON.stringify(payload)),window.location.protocol+'//api.sunset.systems');if(xe_isset(pfm_dataTunnel,'object')&&pfm_dataTunnel.ready){xe_core.vm!==false&&console.log('Performa.AI - Data Tunnel sending info...');pfm_dataTunnel.layer.contentWindow.postMessage(window.btoa(JSON.stringify(payload)),window.location.protocol+'//api.performa.ai');}
+return cbid;});

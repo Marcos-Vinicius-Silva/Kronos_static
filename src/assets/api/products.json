@@ -1,0 +1,36 @@
+{
+    "products": [
+        {
+            "name": "CARVÃO ARTCOCO GROSSO (IMPORTADO) - 500G",
+            "price": 1,
+            "lastPrice": 1.5,
+            "description": "Carvão para narguile ArtCoco Grosso, tem formato hexagonal, é produzido com fibras de coco, alta duração na sua sessão, fácil acendimento, fabricado no Brasil. Aproximadamente 500g no total.",
+            "hide": false,
+            "id": "91qtJeTTZvGu2THVG626aedff0a20f"
+        },
+        {
+            "name": "CARVÃO COCO BASS 1KG TIJOLINHO",
+            "price": 47.40,
+            "lastPrice": 49.90,
+            "description": "Carvão para narguile ArtCoco Grosso, tem formato hexagonal, é produzido com fibras de coco, alta duração na sua sessão, fácil acendimento, fabricado no Brasil. Aproximadamente 500g no total.",
+            "hide": false,
+            "id": "VfoyGQPqpAtGoKeT1626aee0c6a2ed"
+        },
+        {
+            "name": "CARVÃO COCO BASS 1KG TIJOLINHo",
+            "price": 40.40,
+            "lastPrice": 49.90,
+            "description": "Carvão para narguile Coco Bass, sem prejudicar o meio-ambiente é desenvolvido a partir da casca do coco, os carvões são 100% naturais e ecologicamente corretos. Sua produção é de alta qualidade. Não possuem cheiro e não dão gosto. Pode acender sem medo que o único sabor que você vai sentir vai ser da sua essência.",
+            "hide": false,
+            "id": "umvY6q1h3dmaFp0eC626aee27a556d"
+        },
+        {
+            "name": "CARVÃO ARTCOCO GROSSO (IMPORTADO) - 500G",
+            "price": 1,
+            "lastPrice": 1.5,
+            "description": "Carvão para narguile ArtCoco Grosso, tem formato hexagonal, é produzido com fibras de coco, alta duração na sua sessão, fácil acendimento, fabricado no Brasil. Aproximadamente 500g no total.",
+            "hide": false,
+            "id": "91qtJeTTZvGu2THVG626aedff0a20f"
+        }
+    ]
+}

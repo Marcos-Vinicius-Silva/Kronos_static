@@ -1,0 +1,31 @@
+.cookies {  
+    background: radial-gradient(circle, rgba(152,15,119,1) 0%, rgba(47,2,160,1) 61%, rgba(104,4,178,1) 100%);
+    position: fixed;
+    width: 100%;
+    color: white;
+    bottom: 2rem;
+    z-index: 1000; 
+    &__info {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    &__button {
+        text-align: center;
+        & button {
+            margin-bottom: 1em;
+            height: 50px;
+            width: 50%;
+            background: radial-gradient(circle, rgba(152,15,119,1) 0%, rgba(47,2,160,1) 61%, rgba(104,4,178,1) 100%);
+            color: white;
+            border: 1px solid rgba(47,2,160,1);
+            cursor: pointer;
+        }
+        & button:hover {
+             background: radial-gradient(circle, rgba(152, 15, 120, 0.74) 0%, rgba(47, 2, 160, 0.747) 61%, rgba(103, 4, 178, 0.74) 100%);
+        }
+    }
+}
+
+.cookies_none {
+    display: none;
+}

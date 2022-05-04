@@ -8,7 +8,7 @@ export default function MainHome() {
       <main className={styles.main}>
         <section className={styles.main__section}>
           <div className={styles.main__section__infos}>
-            <h1>Poxima Sexta Feira com DJ Emily Raquel</h1>
+            <h1>Proxima Sexta Feira com DJ Emily Raquel</h1>
             <p>
               Todo texto é produzido para alguém. Assim, para aqueles que
               escrevem na internet, é necessária uma preocupação com o modo como
@@ -30,7 +30,7 @@ export default function MainHome() {
           </div>
           <div className={styles.main__section__img}>
               <div className={styles.main__section__img__banner}>
-                 {returnIcon('carousel01')}
+                 {returnIcon('fundoTeste')}
               </div>
 
               <div className={styles.main__section__img__background}></div>

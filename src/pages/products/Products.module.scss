@@ -1,0 +1,90 @@
+.main {
+  width: 100%;
+  margin-top: 2px;
+  &__section {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    &__product {
+      width: 33.3%;
+      flex-wrap: wrap;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 350px;
+      margin-top: 1em;
+      transition: 2s;
+
+      &__container {
+        height: 150px;
+        text-align: center;
+        &__logo {
+          width: 50%;
+          height: 70%;
+        }
+      }
+
+      &__inf {
+        margin-left: 12px;
+        margin-right: 12px;
+        text-align: center;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &__title {
+          font-size: 1em;
+          font-weight: 400;
+          margin: 2px;
+        }
+        &__lastPrice {
+          font-weight: 200;
+          text-decoration: line-through;
+          font-size: 1em;
+          margin: 0;
+        }
+        &__price {
+          font-weight: 600;
+          color: rgba(152, 15, 119, 1);
+          margin: 2px;
+        }
+        &__button {
+          width: 100%;
+          cursor: pointer;
+          font-size: 1.5em;
+          background-color: rgba(152, 15, 119, 1);
+          color: white;
+          border: 1px solid rgb(109, 9, 86);
+          padding: 18px 0;
+          transition: 2s;
+        }
+        &__button:hover {
+          background-color: rgba(152, 15, 120, 0.671);
+          transition: 2s;
+        }
+      }
+    }
+    &__product:hover {
+      box-shadow: 0 0 1em rgba(152, 15, 119, 1);
+      transition: 2s;
+    }
+  }
+}
+
+//-----MOBILE-----MOBILE-----MOBILE-----MOBILE-----MOBILE-----MOBILE-----
+
+@media (max-width: 960px) {
+  .main {
+    
+    &__section {
+        
+      &__product {
+        width: 100%;
+      }
+    }
+  }
+}

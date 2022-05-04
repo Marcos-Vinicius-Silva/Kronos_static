@@ -3,11 +3,12 @@ import { returnIcon } from "../../components/Icons/returnIcons";
 import { redirect } from "../../components/Redirecionar/redirect";
 import Contacts from "../../contacts";
 import Products from "../../products";
+import Product from "../../products/product";
 import MainHome from "../MainHome";
 import styles from "./HeaderHome.module.scss";
 
 export default function HeaderHome() {
-  const [activedScreen, setActivedScreen] = useState("MainHome");
+  const [activedScreen, setActivedScreen] = useState({screen: "MainHome"});
   const [activedScreenMobile, setActivedScreenMobile] = useState(false);
 
   function returnScreen(screen: string) {
@@ -17,7 +18,9 @@ export default function HeaderHome() {
       case "Contatos":
         return <Contacts />;
       case "Produtos":
-        return <Products />;
+        return <Products setActivedScreen={setActivedScreen}/>;
+      case "Produto":
+        return <Product />;
     }
   }
   return (
@@ -47,7 +50,7 @@ export default function HeaderHome() {
               <li>
                 <a
                   onClick={() => {
-                    setActivedScreen("MainHome");
+                    setActivedScreen({screen: "MainHome"});
                   }}
                 >
                   Home
@@ -56,7 +59,7 @@ export default function HeaderHome() {
               <li>
                 <a
                   onClick={() => {
-                    setActivedScreen("Produtos");
+                    setActivedScreen({screen: "Produtos"});
                   }}
                 >
                   Produtos
@@ -65,7 +68,7 @@ export default function HeaderHome() {
               <li>
                 <a
                   onClick={() => {
-                    setActivedScreen("Contatos");
+                    setActivedScreen({screen: "Contatos"});
                   }}
                 >
                   Contatos
@@ -77,36 +80,36 @@ export default function HeaderHome() {
           <div className={styles.header__nav__pages}>
             <a
               className={
-                activedScreen === "MainHome"
+                activedScreen.screen === "MainHome"
                   ? styles.activedScreen
                   : styles.desativedScreen
               }
               onClick={() => {
-                setActivedScreen("MainHome");
+                setActivedScreen({screen: "MainHome"});
               }}
             >
               Home
             </a>
             <a
               className={
-                activedScreen === "Produtos"
+                activedScreen.screen === "Produtos"
                   ? styles.activedScreen
                   : styles.desativedScreen
               }
               onClick={() => {
-                setActivedScreen("Produtos");
+                setActivedScreen({screen: "Produtos"});
               }}
             >
               Produtos
             </a>
             <a
               className={
-                activedScreen === "Contatos"
+                activedScreen.screen === "Contatos"
                   ? styles.activedScreen
                   : styles.desativedScreen
               }
               onClick={() => {
-                setActivedScreen("Contatos");
+                setActivedScreen({screen: "Contatos"});
               }}
             >
               Contatos
@@ -132,7 +135,7 @@ export default function HeaderHome() {
         </div>
       </header>
 
-      {activedScreen ? returnScreen(activedScreen) : "Error"}
+      {activedScreen ? returnScreen(activedScreen.screen) : "Error"}
     </>
   );
 }

@@ -1,12 +1,15 @@
 .header {
   width: 100%;
   height: 240px;
-  background: radial-gradient(
-    circle,
-    rgba(152, 15, 119, 1) 0%,
-    rgba(47, 2, 160, 1) 61%,
-    rgba(104, 4, 178, 1) 100%
-  );
+  // background: radial-gradient(
+  //   circle,
+  //   rgba(152, 15, 119, 1) 0%,
+  //   rgba(47, 2, 160, 1) 61%,
+  //   rgba(104, 4, 178, 1) 100%
+  // );
+  background-image: url("../../../assets/Home/fundoTeste02.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
 
@@ -45,7 +48,7 @@
         cursor: pointer;
       }
       & a:hover {
-        border-bottom: 2px solid white;
+        border-bottom: 2px solid #ff00e0;
       }
     }
   }
@@ -199,7 +202,7 @@
 }
 
 .activedScreen {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #ff00e0;
 }
 
 .desativedScreen {

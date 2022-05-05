@@ -20,7 +20,7 @@ export default function HeaderHome() {
       case "Produtos":
         return <Products setActivedScreen={setActivedScreen}/>;
       case "Produto":
-        return <Product />;
+        return <Product setActivedScreen={setActivedScreen}/>;
     }
   }
   return (

@@ -1,6 +1,33 @@
 .main {
   width: 100%;
   margin-top: 2px;
+
+  &__goBack {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #00000038;
+    margin-top: 2em;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    justify-content: space-around;
+    display: flex;
+    
+    & h1 {
+      font-size: 1.5em;
+      font-weight: 300;
+      margin-left: 5em;
+    }
+    & svg {
+      margin-left: 0.5em;
+      font-size: 4em;
+      cursor: pointer;
+    }
+
+    &__order {
+      align-self: center;
+    }
+  }
   &__section {
     width: 90%;
     margin-left: auto;

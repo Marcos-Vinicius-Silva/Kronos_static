@@ -1,20 +1,68 @@
 import styles from "./Products.module.scss";
 import carvao from "../../assets/Projects/6c703e160e(2).jpg";
-import React, { SetStateAction } from "react";
+import React, { SetStateAction, useState, Component } from "react";
+import { returnIcon } from "../components/Icons/returnIcons";
+import Select from 'react-select'
 
 interface Props {
   setActivedScreen: React.Dispatch<SetStateAction<{ screen: string }>>;
 }
 
 export default function Products({ setActivedScreen }: Props) {
-  let Products = require("../../assets/api/products.json").products;
+  const [Products, setProducts] = useState(require("../../assets/api/products.json").products);
+
+  let valueOrderBy = {
+    value: '',
+    name: ''
+  }
   let formato = {
     minimumFractionDigits: 2,
     style: "currency",
     currency: "BRL",
   };
+  const options = [
+    { value: 'menorPreco', label: 'Menor Preço' },
+    { value: 'maiorPreco', label: 'Maior Preço' },
+    { value: 'maisRelevante', label: 'Mais Relevante' }
+  ]
 
   localStorage.setItem("Product", JSON.stringify("0"));
+
+  const OrderBy = (e:any) => {
+
+    console.log("teste", e.value)
+    var list = []
+    list = Products
+
+    if(e.value === 'menorPreco') {
+      list = list.sort(function(a:any ,b:any) {
+        if (a.price > b.price) {
+          return 1;
+        }
+        if (a.price < b.price) {
+          return -1;
+        }
+        return 0;
+    
+      });
+      setProducts(list)
+    }
+
+    if(e.value === 'maiorPreco') {
+      list = list.sort(function(a:any ,b:any) {
+        if (a.price < b.price) {
+          return 1;
+        }
+        if (a.price > b.price) {
+          return -1;
+        }
+        // a must be equal to b
+        return 0;
+      });
+      console.log('List Maior', list)
+      setProducts(list)
+    }
+  }
 
   const redirectProduct = (id: string) => {
     setActivedScreen({ screen: "Produto" });
@@ -24,6 +72,21 @@ export default function Products({ setActivedScreen }: Props) {
   return (
     <>
       <main className={styles.main}>
+        <div className={styles.main__goBack}>
+          <div
+            onClick={() => {
+              setActivedScreen({ screen: "Produtos" });
+            }}
+          >
+            {returnIcon("FiArrowLeftCircle")}
+          </div>
+
+          <h1>Produtos</h1>
+
+          <div  className={styles.main__goBack__order}>
+          <Select  defaultValue={{ value: 'maisRelevante', label: 'Mais Relevante' }} options={options} onChange={(e) => OrderBy(e)}/>
+          </div>
+        </div>
         <section className={styles.main__section}>
           {Products.map((Product: any, index: any) => (
             <div key={index} className={styles.main__section__product}>

@@ -1,0 +1,87 @@
+.main {
+    width: 100%;
+    margin-top: 0;
+
+    &__section {
+        display: flex;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+
+        &__info {
+            width: 50%;
+
+            & li image {
+                width: 20px;
+            }
+
+        }
+
+        &__contate {
+            width: 50%;
+
+            &__form {
+                width: 67%;
+                margin-left: auto;
+                margin-right: auto;
+
+                & h1 {
+                    font-size: 2em;
+                    color: purple;
+                    font-weight: 300;
+                }
+
+                &__input {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 1em;
+
+                    & input {
+                        height: 2em;
+                    }
+                }
+
+                &__inputAdress {
+                    margin-bottom: 1em;
+
+                    & input {
+                        width: 100%;
+                        height: 2em;
+
+                    }
+
+                }
+
+                &__message {
+                    & input {
+                        width: 100%;
+                        height: 100px;
+                    }
+
+                }
+
+            }
+        }
+    }
+}
+
+.main__section__info__imgWhatsapp {
+    width: 20px;
+    margin-right: 1em;
+   
+}
+.main__section__info__email{
+    width: 20px;
+    margin-right: 1em;
+
+}
+.main__section__info__site{
+    width: 20px;
+    margin-right: 1em;
+}
+
+.main__section__info__title{
+    color: purple;
+    font-weight: 300;
+    font-size: 2em;
+}

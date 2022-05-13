@@ -1,0 +1,26 @@
+.footer {
+  width: 100%;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.151);
+  display: flex;
+  flex-direction: column;
+
+  &__section {
+    width: 90%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+
+    &__powerBy {
+      border-left: 2px solid black;
+      height: 80px;
+      width: 100px;
+      background-image: url("../../../assets/Footer/logoMarcos.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}

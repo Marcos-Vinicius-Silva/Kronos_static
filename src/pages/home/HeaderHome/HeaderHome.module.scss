@@ -1,13 +1,13 @@
 .header {
   width: 100%;
-  height: 240px;
+  height: 100px;
   // background: radial-gradient(
   //   circle,
   //   rgba(152, 15, 119, 1) 0%,
   //   rgba(47, 2, 160, 1) 61%,
   //   rgba(104, 4, 178, 1) 100%
   // );
-  background-image: url("../../../assets/Home/fundoTeste02.jpeg");
+  background-image: url("../../../assets/Home/header.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -16,19 +16,20 @@
   &__nav {
     margin-top: 12px;
     margin-left: auto;
-    width: 90%;
+    width: 100%;
     height: 90px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     &__logo {
-      height: 90px;
-      width: 90px;
+      height: 70px;
+      width: 70px;
       background-image: url("../../../assets/Home/logo-removebg.png");
       background-size: cover;
       background-repeat: no-repeat;
       margin-left: 12px;
+      margin-right: 3em;
     }
 
     &__menuMobile {
@@ -36,50 +37,51 @@
     }
 
     &__pages {
-      width: 80%;
+      width: 60%;
       text-align: center;
       margin-right: 5em;
 
       & a {
         text-decoration: none;
         color: white;
-        font-size: 1.4rem;
+        font-size: 2rem;
         margin-right: 2em;
         cursor: pointer;
+        font-weight: 300;
+      
       }
       & a:hover {
-        border-bottom: 2px solid #ff00e0;
+        border-bottom: 2px solid white;
       }
     }
-  }
 
-  &__inf {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
-    text-align: center;
-
-    &__logo {
-      display: flex;
-      margin-bottom: 12px;
-
-      &__insta {
-        height: 70px;
-        width: 70px;
-        background-image: url("../../../assets/Home/logoInsta.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        margin-right: 5em;
-        cursor: pointer;
-      }
-
-      &__whats {
-        height: 70px;
-        width: 70px;
-        background-image: url("../../../assets/Home/whatsapp-logo-.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        cursor: pointer;
+    &__inf {
+      margin-left: auto;
+      margin-right: auto;    
+      text-align: center;
+  
+      &__logo {
+        display: flex;
+        margin-bottom: 12px;       
+  
+        &__insta {
+          height: 50px;
+          width: 50px;
+          background-image: url("../../../assets/Home/logoInsta.png");
+          background-size: cover;
+          background-repeat: no-repeat;
+          margin-right: 5em;
+          cursor: pointer;
+        }
+  
+        &__whats {
+          height: 50px;
+          width: 50px;
+          background-image: url("../../../assets/Home/whatsapp-logo-.png");
+          background-size: cover;
+          background-repeat: no-repeat;
+          cursor: pointer;
+        }
       }
     }
   }
@@ -202,7 +204,7 @@
 }
 
 .activedScreen {
-  border-bottom: 2px solid #ff00e0;
+  border-bottom: 2px solid white;
 }
 
 .desativedScreen {

@@ -8,7 +8,7 @@ import MainHome from "../MainHome";
 import styles from "./HeaderHome.module.scss";
 
 export default function HeaderHome() {
-  const [activedScreen, setActivedScreen] = useState({screen: "MainHome"});
+  const [activedScreen, setActivedScreen] = useState({ screen: "MainHome" });
   const [activedScreenMobile, setActivedScreenMobile] = useState(false);
 
   function returnScreen(screen: string) {
@@ -18,9 +18,9 @@ export default function HeaderHome() {
       case "Contatos":
         return <Contacts />;
       case "Produtos":
-        return <Products setActivedScreen={setActivedScreen}/>;
+        return <Products setActivedScreen={setActivedScreen} />;
       case "Produto":
-        return <Product setActivedScreen={setActivedScreen}/>;
+        return <Product setActivedScreen={setActivedScreen} />;
     }
   }
   return (
@@ -50,7 +50,7 @@ export default function HeaderHome() {
               <li>
                 <a
                   onClick={() => {
-                    setActivedScreen({screen: "MainHome"});
+                    setActivedScreen({ screen: "MainHome" });
                   }}
                 >
                   Home
@@ -59,7 +59,7 @@ export default function HeaderHome() {
               <li>
                 <a
                   onClick={() => {
-                    setActivedScreen({screen: "Produtos"});
+                    setActivedScreen({ screen: "Produtos" });
                   }}
                 >
                   Produtos
@@ -68,7 +68,7 @@ export default function HeaderHome() {
               <li>
                 <a
                   onClick={() => {
-                    setActivedScreen({screen: "Contatos"});
+                    setActivedScreen({ screen: "Contatos" });
                   }}
                 >
                   Contatos
@@ -85,7 +85,7 @@ export default function HeaderHome() {
                   : styles.desativedScreen
               }
               onClick={() => {
-                setActivedScreen({screen: "MainHome"});
+                setActivedScreen({ screen: "MainHome" });
               }}
             >
               Home
@@ -97,7 +97,7 @@ export default function HeaderHome() {
                   : styles.desativedScreen
               }
               onClick={() => {
-                setActivedScreen({screen: "Produtos"});
+                setActivedScreen({ screen: "Produtos" });
               }}
             >
               Produtos
@@ -109,30 +109,30 @@ export default function HeaderHome() {
                   : styles.desativedScreen
               }
               onClick={() => {
-                setActivedScreen({screen: "Contatos"});
+                setActivedScreen({ screen: "Contatos" });
               }}
             >
               Contatos
             </a>
           </div>
-        </nav>
 
-        <div className={styles.header__inf}>
-          <div>
-            <div className={styles.header__inf__logo}>
-              <div
-                className={styles.header__inf__logo__insta}
-                title="ir ao instagram"
-                onClick={() => redirect("instagram")}
-              ></div>
-              <div
-                className={styles.header__inf__logo__whats}
-                title="ir ao whatsapp"
-                onClick={() => redirect("whatsapp")}
-              ></div>
+          <div className={styles.header__nav__inf}>
+            <div>
+              <div className={styles.header__nav__inf__logo}>
+                <div
+                  className={styles.header__nav__inf__logo__insta}
+                  title="ir ao instagram"
+                  onClick={() => redirect("instagram")}
+                ></div>
+                <div
+                  className={styles.header__nav__inf__logo__whats}
+                  title="ir ao whatsapp"
+                  onClick={() => redirect("whatsapp")}
+                ></div>
+              </div>
             </div>
           </div>
-        </div>
+        </nav>
       </header>
 
       {activedScreen ? returnScreen(activedScreen.screen) : "Error"}

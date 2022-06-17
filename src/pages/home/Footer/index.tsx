@@ -6,7 +6,9 @@ export default function Footer() {
     <>
       <footer className={styles.footer}>
         <section className={styles.footer__section}>      
-          <div className={styles.footer__section__powerBy}></div>
+          <div className={styles.footer__section__powerBy}>
+          &copy; 2022 Copyrigth Marcos Vinicius
+          </div>
         </section>
       </footer>
     </>

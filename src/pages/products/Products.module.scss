@@ -106,7 +106,12 @@
 
 @media (max-width: 960px) {
   .main {
-    
+    &__goBack {
+      & h1 {
+        margin-left: 2em;
+      }
+    }
+
     &__section {
         
       &__product {

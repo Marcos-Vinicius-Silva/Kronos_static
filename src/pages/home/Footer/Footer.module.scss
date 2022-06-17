@@ -10,13 +10,14 @@
     height: 150px;
     margin-left: auto;
     margin-right: auto;
-    justify-content: space-between;
+    justify-content: center;
     display: flex;
     align-items: center;   
 
     &__powerBy {
       height: 50px;
-      
+      color: white;
+      height: fit-content;
     }
   }
 }

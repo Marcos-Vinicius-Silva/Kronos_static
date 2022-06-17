@@ -39,7 +39,7 @@ export default function Products({ setActivedScreen }: Props) {
         <div className={styles.main__goBack}>
           <div
             onClick={() => {
-              setActivedScreen({ screen: "Produtos" });
+              setActivedScreen({ screen: "MainHome" });
             }}
           >
             {returnIcon("FiArrowLeftCircle")}

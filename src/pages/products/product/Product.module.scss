@@ -129,3 +129,40 @@
     }
   }
 }
+
+//-----MOBILE-----MOBILE-----MOBILE-----MOBILE-----MOBILE-----MOBILE-----
+
+@media (max-width: 960px) {
+  .main { 
+    &__goBack {
+      & h1 {
+        margin-left: 2em;
+      }
+    }
+
+    &__section {
+      width: 100%;
+      height: auto;
+  
+      &__product {
+        flex-wrap: wrap;
+
+        &__imgs {
+          & img {
+            width: 65px;
+            margin-left: 0.5em;
+          }
+        }
+
+        &__img {
+          margin-left: 0em;
+          width: 300px;
+          
+          & img {
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+}

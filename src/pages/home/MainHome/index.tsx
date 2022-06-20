@@ -1,4 +1,5 @@
 import { returnIcon } from "../../components/Icons/returnIcons";
+import { redirect } from "../../components/Redirecionar/redirect";
 import styles from "./MainHome.module.scss";
 
 
@@ -20,10 +21,12 @@ export default function MainHome() {
             <div className={styles.main__section__infos__container}>
               <div
                 className={styles.main__section__infos__container__localizacao}
+                onClick={() => redirect("localizacao")}
+                title="Ir a Localização"
               >
                 {returnIcon("localizacao")}
                 <h1>Local</h1>
-                <p>Rua Emily vai me dizer N: 5858 Jd Paulista Monte Mor</p>
+                <p>Av Janio Quadros, 259, Centro Monte Mor/SP - CEP 13190-000</p>
               </div>
               <div
                 className={styles.main__section__infos__container__calendario}

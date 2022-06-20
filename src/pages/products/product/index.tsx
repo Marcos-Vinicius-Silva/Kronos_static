@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { returnIcon } from "../../components/Icons/returnIcons";
 import styles from "./Product.module.scss";
 import React, { SetStateAction } from "react";
+import { redirect } from "../../components/Redirecionar/redirect";
 
 interface Props {
   setActivedScreen: React.Dispatch<SetStateAction<{ screen: string }>>;
@@ -71,6 +72,7 @@ export default function Product({ setActivedScreen }: Props) {
 
                     <button
                       className={styles.main__section__product__inf__button}
+                      onClick={() => redirect("whatsapp")}
                     >
                       CONVERSAR NO WHATSSAPP
                     </button>

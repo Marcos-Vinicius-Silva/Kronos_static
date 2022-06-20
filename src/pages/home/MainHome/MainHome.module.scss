@@ -36,6 +36,7 @@
         &__localizacao {
           width: 50%;
           font-family: 'Quicksand', sans-serif;
+          cursor: pointer;
 
           & img {
             width: 80px;
@@ -117,6 +118,13 @@
         &__container {
           text-align: center;
           margin-top: 1em;
+
+          &__localizacao {
+            
+            & p {
+              width: 100%;
+            }
+          }
         }
       }
 

@@ -2,7 +2,7 @@ import LogoInsta from "../../../assets/Home/logoInsta.png";
 import carousel01 from "../../../assets/MainHome/carousel01.jpeg";
 import localizacao from "../../../assets/MainHome/localizacao.png";
 import calendario from "../../../assets/MainHome/calendario.png";
-import fundoTeste from "../../../assets/Home/fundoTeste.jpg";
+import banner from "../../../assets/Home/fundoHome.jpg";
 import img01_91qtJeTTZvGu2THVG626aedff0a20f from "../../../assets/Projects/carvao01.jpg";
 import img02_91qtJeTTZvGu2THVG626aedff0a20f from "../../../assets/Projects/carvao02.jpg";
 import whatsapp from "../../../assets/Footer/whatsapp.png";
@@ -36,8 +36,8 @@ export function returnIcon(icon: string | undefined) {
     case "calendario":
       return <img src={calendario} alt="Calendario" />;
 
-    case "fundoTeste":
-      return <img src={fundoTeste} alt="fundo Teste" />;
+    case "banner":
+      return <img src={banner} alt="banner" />;
 
     case "AiOutlineClose":
       return <AiOutlineClose />;

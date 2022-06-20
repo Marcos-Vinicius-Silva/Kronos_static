@@ -5,7 +5,6 @@ import styles from "./MainHome.module.scss";
 
 export default function MainHome() {
 
-  var Video = 'https://www.instagram.com/reel/CddwEMqJSNM/?utm_source=ig_web_copy_link'
   return (
     <>
       <main className={styles.main}>
@@ -39,7 +38,7 @@ export default function MainHome() {
           </div>
           <div className={styles.main__section__img}>
             <div className={styles.main__section__img__banner}>          
-            {returnIcon('fundoTeste')}
+            {returnIcon('banner')}
             </div>
 
             <div className={styles.main__section__img__background}></div>

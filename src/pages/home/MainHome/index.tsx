@@ -14,7 +14,7 @@ export default function MainHome() {
             <p>
               Todo texto é produzido para alguém. Assim, para aqueles que
               escrevem na internet, é necessária uma preocupação com o modo como
-              o texto é construído para que ele seja “aceito” pelo receptor.
+              o texto é construído para que ele seja “aceito” pelo receptor..
             </p>
 
             <div className={styles.main__section__infos__container}>
